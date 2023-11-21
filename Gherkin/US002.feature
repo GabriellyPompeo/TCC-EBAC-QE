@@ -35,3 +35,13 @@
             Exemplos:
             | usuario       | senha  | mensagem                                                  |
             | "joao@teste"  | "123"  | "Senha ou usuário incorretos, por favor, tente novamente" |
+
+
+            Cenário: Senha ou user incorreto pela 3ª vez
+            Quando eu digitar um <usuario> ou sua <senha> errada pela terceira vez
+            Então devo ver uma <mensagem>
+            E o login estará trancado por 15 minutos 
+
+            Exemplos:
+            | usuario       | senha  | mensagem                                                                                        |
+            | "joao@teste"  | "123"  | "muitas tentativas de login realizadas, para sua segurança o login será travado por 15 minutos" |
